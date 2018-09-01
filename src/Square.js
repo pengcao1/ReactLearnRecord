@@ -5,7 +5,7 @@ class Square extends React.Component{
         const { value } = this.props;
         return(
             <button className="square"
-            onClick={function(){ alert('click = ' + value);}}
+            onClick={() => alert('click = ' + value)}
             >
                 {this.props.value}
             </button>
