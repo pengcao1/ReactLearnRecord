@@ -2,6 +2,7 @@ import React from 'react';
 //import Square from './Square'
 import Square from './FunctionSquare'
 import FSquare from './FunctionSquare'
+import calculateWinner from './calculateWinner'
 class Board extends React.Component{
     constructor(props) {
         super(props);
@@ -28,7 +29,10 @@ class Board extends React.Component{
         );
     }
     render(){
-        const status = 'Next player: ' + (this.state.xIsNext ? 'X' : 'O');
+        const winner = calculateWinner(this.state.squares)
+        const status = winner ?
+            'Winner: ' + winner :
+            'Next player: ' + (this.state.xIsNext ? 'X' : 'O');
         return(
             <div>
                 <div className="status">{status}</div>
