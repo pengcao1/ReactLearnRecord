@@ -8,7 +8,7 @@ class Board extends React.Component{
         return(
             <FSquare value={this.props.squares[i]}
                 onClick={() => this.props.onClick(i)}
-        />
+            />
         );
     }
 
