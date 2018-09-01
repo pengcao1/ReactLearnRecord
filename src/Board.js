@@ -1,5 +1,7 @@
 import React from 'react';
-import Square from './Square'
+//import Square from './Square'
+import Square from './FunctionSquare'
+import FSquare from './FunctionSquare'
 class Board extends React.Component{
     constructor(props) {
         super(props);
@@ -16,7 +18,7 @@ class Board extends React.Component{
 
     renderSquare(i){
         return(
-        <Square value={this.state.squares[i]}
+            <FSquare value={this.state.squares[i]}
                 onClick={() => this.handleClick(i)}
         />
         );
