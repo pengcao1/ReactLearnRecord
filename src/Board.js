@@ -1,8 +1,5 @@
 import React from 'react';
-//import Square from './Square'
-import Square from './FunctionSquare'
 import FSquare from './FunctionSquare'
-import calculateWinner from './calculateWinner'
 class Board extends React.Component{
     renderSquare(i){
         return(
