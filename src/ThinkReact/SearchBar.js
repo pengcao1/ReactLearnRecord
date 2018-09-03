@@ -1,11 +1,21 @@
 import React from "react"
 
 class SearchBar extends React.Component{
+
+    handleFilterChange (e) {
+        this.props.handleFilterChange(e.target.value);
+    }
+    
     render() {
       return (
-        <div>
-          This is SearchBar
-        </div>
+          <form>
+              <input
+                type="text"
+                placeholder="Search..."
+                value={this.props.filterProps}
+                onChange={this.handleFilterChange}
+              />
+          </form>
       )
     };
 }
