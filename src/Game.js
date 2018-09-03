@@ -2,6 +2,7 @@ import React from 'react'
 import Board from './Board'
 import calculateWinner from './calculateWinner';
 import Calculator from './liftingstateup/Calculator';
+import FilterableProductTable from "./ThinkReact/FilterableProductTable";
 
 class Game extends React.Component{
     constructor(props) {
@@ -53,6 +54,7 @@ class Game extends React.Component{
                     <ol>{moves}</ol>
                 </div>
                 <Calculator/>
+                <FilterableProductTable/>
             </div>
         );
     }
