@@ -3,11 +3,15 @@ import SearchBar from "./SearchBar";
 import ProductTable from "./ProductTable";
 
 class FilterableProductTable extends React.Component {
+    state = {
+        filterText: "",
+        inStockOnly: false,
+    }
     render(){
         return(
             <div>
                 <SearchBar/>
-                <ProductTable/>
+                <ProductTable products={this.props.products}/>
             </div>
         );
     }
