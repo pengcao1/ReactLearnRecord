@@ -8,7 +8,6 @@ class ProductRow extends React.Component {
             <span style={{color:"#FF0000"}}>
                 {product.name}
             </span>
-        console.log("product ", product);
 
         return (
             <tr>

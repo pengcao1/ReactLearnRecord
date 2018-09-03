@@ -15,6 +15,13 @@ class SearchBar extends React.Component{
                 value={this.props.filterProps}
                 onChange={this.handleFilterChange}
               />
+              <p>
+                  <input
+                    type="checkbox"
+                  />
+                  {" "}
+                  Only show products in stock
+              </p>
           </form>
       )
     };
