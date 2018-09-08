@@ -7,20 +7,20 @@ class Calculator extends React.Component {
         super(props);
         this.handleCelsiusChange = this.handleCelsiusChange.bind(this);
         this.handleFathrenheitChange = this.handleFathrenheitChange.bind(this);
-        this.state={temperature:'', scale: 'c'}
+        this.state = { temperature: '', scale: 'c' }
     }
     handleCelsiusChange(temperature) {
-        this.setState({scale:'c',temperature});
+        this.setState({ scale: 'c', temperature });
     }
     handleFathrenheitChange(temperature) {
-        this.setState({scale:'f',temperature});
+        this.setState({ scale: 'f', temperature });
     }
 
-    render(){
-        const { scale, temperature} = this.state;
-        const celsius = scale ==='f'? this.tryContert(temperature,this.toCelsius) : temperature;
-        const fahrenheit = scale ==='c'? this.tryContert(temperature,this.toFahrenheit) : temperature;
-        return(
+    render() {
+        const { scale, temperature } = this.state;
+        const celsius = scale === 'f' ? this.tryContert(temperature, this.toCelsius) : temperature;
+        const fahrenheit = scale === 'c' ? this.tryContert(temperature, this.toFahrenheit) : temperature;
+        return (
             <div>
                 <TemperatureInput scale="c"
                     temperature={celsius}

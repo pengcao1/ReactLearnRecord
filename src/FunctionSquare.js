@@ -1,8 +1,8 @@
 import React from 'react'
 function FSquare(props) {
-    return(
+    return (
         <button className="square"
-                onClick={props.onClick}>
+            onClick={props.onClick}>
             {props.value}
         </button>
     );

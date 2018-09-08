@@ -1,16 +1,16 @@
 import React from 'react';
 import FSquare from './FunctionSquare'
-class Board extends React.Component{
-    renderSquare(i){
-        return(
+class Board extends React.Component {
+    renderSquare(i) {
+        return (
             <FSquare value={this.props.squares[i]}
                 onClick={() => this.props.onClick(i)}
             />
         );
     }
 
-    render(){
-        return(
+    render() {
+        return (
             <div>
                 <div className="board-row">
                     {this.renderSquare(0)}
