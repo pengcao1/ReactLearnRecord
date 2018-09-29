@@ -1,8 +1,9 @@
 import React from 'react'
 import TemperatureInput from './TemperatureInput'
-import BoilingVerdict from './BoilingVerdict';
+import BoilingVerdict from './BoilingVerdict'
+import { connect } from 'react-redux'
 
-class Calculator extends React.Component {
+export default class CalculatorInner extends React.Component {
     constructor(props) {
         super(props);
         this.handleCelsiusChange = this.handleCelsiusChange.bind(this);
@@ -51,5 +52,6 @@ class Calculator extends React.Component {
         const rounded = Math.round(output * 1000) / 1000;
         return rounded.toString();
     }
-}
-export default Calculator;
+};
+
+export const Calculator = connect()(CalculatorInner);
