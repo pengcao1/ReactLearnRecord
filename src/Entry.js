@@ -4,6 +4,7 @@ import Calculator from './liftingstateup/CalculatorInner'
 import FilterableProductTable from "./ThinkReact/FilterableProductTable"
 import { PRODUCTS } from './ThinkReact/data'
 import LearnRedux from './learnRedux/LearnRedux'
+import EsSymbol from './learnes6/EsSymbol';
 
 
 export default class Entry extends Component {
@@ -16,6 +17,7 @@ export default class Entry extends Component {
                 <div className="entry">
                     <LearnRedux />
                 </div>
+                <EsSymbol />
             </div>
         )
     }
